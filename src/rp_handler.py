@@ -26,7 +26,7 @@ from rp_schemas import TRAIN_SCHEMA
 #                                    Handler                                   #
 # ---------------------------------------------------------------------------- #
 def handler(job):
-   print("job received....")
+   print("job received.....")
 
 
 runpod.serverless.start({"handler": handler, "refresh_worker": True})
