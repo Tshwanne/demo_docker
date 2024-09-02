@@ -20,18 +20,18 @@ RUN pip install --upgrade pip && \
 ADD src .
 
 # Run the install script
-COPY builder/install.py /workspace/install.py
-RUN python -u /workspace/install.py
-RUN rm /workspace/install.py
+#COPY builder/install.py /workspace/install.py
+#RUN python -u /workspace/install.py
+#RUN rm /workspace/install.py
 
 
 
 # Download the models
-COPY builder/model_fetcher.sh /workspace/model_fetcher.sh
-RUN sh /workspace/model_fetcher.sh
-RUN rm /workspace/model_fetcher.sh
+#COPY builder/model_fetcher.sh /workspace/model_fetcher.sh
+#RUN sh /workspace/model_fetcher.sh
+#RUN rm /workspace/model_fetcher.sh
 
-ENV DEBIAN_FRONTEND noninteractive
+#ENV DEBIAN_FRONTEND noninteractive
 
-ENV PYTHONUNBUFFERED=1
-CMD python -u rp_handler.py
+#ENV PYTHONUNBUFFERED=1
+#CMD python -u rp_handler.py
